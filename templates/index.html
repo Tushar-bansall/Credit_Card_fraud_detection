@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+
+    <title> CC Fraud Detection App </title>
+
+</head>
+
+
+
+<style>
+        body {
+            background-color: MistyRose;
+            color: black;
+            text-align: center;
+            padding-right: 50px;
+            font-family: "Calibri";
+                    }
+        </style>
+
+<body>
+
+
+<h1 style="font-size: 28; text-align: center; font-weight: bold; color: blue; "><b>Credit card fraud detection system </b></h1>
+<br>
+<b> {{ prediction_text }} </b>
+<br><br>
+<img src = "/static/img3.jpg" width="400" height="200" style="background-size:50%;
+            background-repeat: no-repeat;>
+<br><
+<div class = "login" style="font-size: 24px">
+    <!-- Inputs to our model-->
+<br><br><br><br>
+<form action="{{ url_for('predict')}} " method="post">
+    
+    <label for="txn_amt"> <b> Transaction amount (in US Dollars) :</b> </label>
+    <input type = "number" id = "txn_amt" name = "txn_amt" required = "required" step = "any" />
+    <br><br><br>
+    <label for = "txn_time"><b> Transaction time (in hours) :</b></label>
+    <select name = 'txn_time' id = 'txn_time'>
+        <option value = '00'> 00 </option>
+<option value = '01'> 01 </option>
+<option value = '02'> 02 </option>
+<option value = '03'> 03 </option>
+<option value = '04'> 04 </option>
+<option value = '05'> 05 </option>
+<option value = '06'> 06 </option>
+<option value = '07'> 07 </option>
+<option value = '08'> 08 </option>
+<option value = '09'> 09 </option>
+<option value = '10'> 10 </option>
+<option value = '11'> 11 </option>
+<option value = '12'> 12 </option>
+<option value = '13'> 13 </option>
+<option value = '14'> 14 </option>
+<option value = '15'> 15 </option>
+<option value = '16'> 16 </option>
+<option value = '17'> 17 </option>
+<option value = '18'> 18 </option>
+<option value = '19'> 19 </option>
+<option value = '20'> 20 </option>
+<option value = '21'> 21 </option>
+<option value = '22'> 22 </option>
+<option value = '23'> 23 </option>
+    </select>
+<br><br><br>
+
+<label for = "merch_catg"><b>Merchant Category :</b></label>
+    <select name = 'merch_catg' id = 'merch_catg'>
+        <option value = 'Travel'>Travel</option>
+<option value = 'Grocery-Online'>Grocery-Online</option>
+<option value = 'Gas-Transport'>Gas-Transport</option>
+<option value = 'Kids-Pets'>Kids-Pets</option>
+<option value = 'Health & Fitness'>Health & Fitness</option>
+<option value = 'Personal care'>Personal care</option>
+<option value = 'Food & Dining'>Food & Dining</option>
+<option value = 'Miscellaneous-POS'>Miscellaneous-POS</option>
+<option value = 'Home'>Home</option>
+<option value = 'Grocery-POS'>Grocery-POS</option>
+<option value = 'Entertainment'>Entertainment</option>
+<option value = 'Miscellaneous-Online'>Miscellaneous-Online</option>
+<option value = 'Shopping-POS'>Shopping-POS</option>
+<option value = 'Shopping-Online'>Shopping-Online</option>
+
+    </select>
+<br><br>
+
+    <button type="submit" class="btn btn-primary btn-block btn-large" style="padding: 10px 15px" >Predict</button>
+    <br>
+
+</form> <br><br><br><br><br>
+    <footer class="button"><f> Designed by <a href="https://www.linkedin.com/in/svsriramerramilli/" style="text-align: right;" > S V Sriram Erramilli </a> <a href = "https://news.mit.edu/2018/machine-learning-financial-credit-card-fraud-0920">Image source </a></f></footer>
+    <!--footer class="button"></footer-->
+    <style>
+a:link, a:visited {
+  color: black;
+  padding: 2px 5px;
+  }
+</style>
+
+</div>
+</body>
+</html>
